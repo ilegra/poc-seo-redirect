@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <title>CLIENT SIDE</title>
+  <meta name="google-site-verification" content="HASH" />
+  <script>
+    "use strict"
+    const serverSideUrl = 'http://af84565f.ngrok.io/'
+    const crawlers = [
+      'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
+    ]
+    for (let i = 0; i < crawlers.length; i++) {
+      if (crawlers[i] === navigator.userAgent) {
+        window.location.replace(serverSideUrl)
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="hello"></div>
+  <p>Client side!</p>
+  <script src="./main.js"></script>
+</body>
+</html>
